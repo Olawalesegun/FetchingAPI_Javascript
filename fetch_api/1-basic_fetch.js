@@ -4,7 +4,7 @@ const url = 'https://jsonplaceholder.typicode.com/users';
     
     fetch(url)
         .then((response) => {
-            // if(! response.ok) throw new Error("There was an error in reaching this file");
+            if(! response.ok) throw new Error("There was an error in reaching this file");
             return response.json();
         })
         .then((dataObj) => {
